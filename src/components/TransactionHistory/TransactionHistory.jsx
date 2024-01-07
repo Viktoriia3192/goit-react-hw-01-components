@@ -1,5 +1,7 @@
-export const TransactionHistory = ({items}) => {
-return (<table className="transaction-history">
+import {Table} from './TransactionHistory.styled';
+
+export const TransactionHistory = ({ items }) => {
+return (<Table className="transaction-history">
   <thead>
     <tr>
       <th>Type</th>
@@ -18,5 +20,5 @@ return (<table className="transaction-history">
     )
 })}
    </tbody> 
-</table>)
+</Table>)
 }

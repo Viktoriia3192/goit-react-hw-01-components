@@ -1,13 +1,13 @@
-import {Item} from './FriendList.styled'
+import {List, Item, Name, Status, Image} from './FriendList.styled'
 export const FriendsList = ({ friends }) => {
     return (
-       < ul className="friend-list" >
+       <List className="friend-list" >
             {friends.map(({ isOnline, avatar, name, id }) => {
                 return (
                 <Item className="item" key={id}>
-        <span className="status">{isOnline}</span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
+        <Status className="status">{isOnline}</Status>
+  <Image className="avatar" src={avatar} alt="User avatar" width="48" />
+        <Name className="name">{name}</Name>
 </Item>  
             )
              
@@ -15,7 +15,7 @@ export const FriendsList = ({ friends }) => {
             
         })
         }
-</ul> 
+</List> 
     )
 }
    

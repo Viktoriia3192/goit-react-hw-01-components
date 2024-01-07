@@ -1,9 +1,9 @@
-import {Photo, List, Item} from './Profile.styled'
+import {Name, Wrap, Photo, List, Item, Label, Quantity} from './Profile.styled'
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
         <>
-    <div className="profile">
-  <div className="description">
+    <Wrap className="profile">
+  <Name className="description">
     <Photo
       src={avatar}
       alt={username}
@@ -12,23 +12,23 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
          <p className="name">{username}</p>
          <p className="tag">{tag}</p>
          <p className="location">{location}</p>
-  </div>
+  </Name>
 
   <List className="stats">
     <Item>
-      <span className="label">Followers</span>
-             <span className="quantity">{stats.followers}</span>
+      <Label className="label">Followers</Label>
+             <Quantity className="quantity">{stats.followers}</Quantity>
     </Item>
     <Item>
-      <span className="label">Views</span>
-             <span className="quantity">{stats.views}</span>
+      <Label className="label">Views</Label>
+             <Quantity className="quantity">{stats.views}</Quantity>
     </Item>
     <Item>
-      <span className="label">Likes</span>
-             <span className="quantity">{stats.likes}</span>
+      <Label className="label">Likes</Label>
+             <Quantity className="quantity">{stats.likes}</Quantity>
     </Item>
   </List>
-</div> 
+</Wrap> 
     </>
     )
  
