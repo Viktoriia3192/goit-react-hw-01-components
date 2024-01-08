@@ -33,7 +33,7 @@ export const Status = styled.span`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-
+    background-color: ${props => props.status ? 'green' : 'red' }
 `;
 
 export const Image = styled.img`

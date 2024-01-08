@@ -4,7 +4,7 @@ export const Statistics = ({ title, stats }) => {
     return (
         <>
             <Statistic className="statistics">
-                <Title className="title">{ title}</Title>
+                {title && <Title className="title">{title}</Title>}
                 <List className="stat-list">
                     {stats.map(({ id, label, percentage }) => {
                     return (<Item className="item" key={id}>
