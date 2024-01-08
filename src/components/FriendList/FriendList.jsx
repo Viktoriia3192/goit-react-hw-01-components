@@ -1,18 +1,13 @@
-import {List, Item, Name, Status, Image} from './FriendList.styled'
+import {List} from './FriendList.styled'
+import { FriendListItem } from './FriendListItem'
+
 export const FriendsList = ({ friends }) => {
     return (
        <List className="friend-list" >
-            {friends.map(({ isOnline, avatar, name, id }) => {
+            {friends.map(({id}) => {
                 return (
-                <Item className="item" key={id}>
-        <Status className="status">{isOnline}</Status>
-  <Image className="avatar" src={avatar} alt="User avatar" width="48" />
-        <Name className="name">{name}</Name>
-</Item>  
+                <FriendListItem key={id}/>
             )
-             
-        
-            
         })
         }
 </List> 
