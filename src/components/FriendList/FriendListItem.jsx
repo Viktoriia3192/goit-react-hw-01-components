@@ -9,3 +9,4 @@ export const FriendListItem = ({isOnline, avatar, name}) => {
 </Item>    
     )
 }
+
